@@ -45,7 +45,7 @@ class App extends Component {
         <View style={{ flex: 7 }}>
           <View
             style={{
-              backgroundColor: "#fff",
+              backgroundColor: "#aaa",
               flexDirection: "row",
               justifyContent: "center",
               alignItems: "flex-start",
