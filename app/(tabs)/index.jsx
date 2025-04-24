@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   ambilData = () => {
-    fetch("http://www.omdbapi.com/?apikey=3d3bad48&s=loved ")
+    fetch("http://www.omdbapi.com/?apikey=3d3bad48&s=loved")
       .then((response) => response.json())
       .then((json) =>
         this.setState({ dataMovie: json.Search }, () => console.log(json))
@@ -85,8 +85,10 @@ class App extends Component {
           data={this.state.dataMovie}
           keyExtractor={(item) => item.imdbID}
           renderItem={({ item, index }) => (
-            <View style={{ marginTop: 10 }}>
-              <Text>{item.Title}</Text>
+            <View style={{ marginTop: 10, alignItems: "center", padding: 10 }}>
+              <Text style={{ fontSize: 16, fontWeight: "bold" }}>
+                {item.Title}
+              </Text>
               <Text>{item.Year}</Text>
             </View>
           )}
