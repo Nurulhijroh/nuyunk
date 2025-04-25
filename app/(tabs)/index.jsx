@@ -79,20 +79,22 @@ class App extends Component {
                 <Text style={{ color: "#fff" }}>Cari</Text>
               </TouchableOpacity>
             </View>
+            <FlatList
+              data={this.state.dataMovie}
+              keyExtractor={(item) => item.imdbID}
+              renderItem={({ item, index }) => (
+                <View
+                  style={{ marginTop: 10, alignItems: "center", padding: 10 }}
+                ></View>
+              )}
+            ></FlatList>
+
+            <Text style={{ fontSize: 16, fontWeight: "bold" }}>
+              {item.Title}
+            </Text>
+            <Text>{item.Year}</Text>
           </View>
         </View>
-        <FlatList
-          data={this.state.dataMovie}
-          keyExtractor={(item) => item.imdbID}
-          renderItem={({ item, index }) => (
-            <View style={{ marginTop: 10, alignItems: "center", padding: 10 }}>
-              <Text style={{ fontSize: 16, fontWeight: "bold" }}>
-                {item.Title}
-              </Text>
-              <Text>{item.Year}</Text>
-            </View>
-          )}
-        ></FlatList>
       </View>
     );
   }
