@@ -88,11 +88,6 @@ class App extends Component {
                 ></View>
               )}
             ></FlatList>
-
-            <Text style={{ fontSize: 16, fontWeight: "bold" }}>
-              {item.Title}
-            </Text>
-            <Text>{item.Year}</Text>
           </View>
         </View>
       </View>
