@@ -62,6 +62,7 @@ class App extends Component {
                   borderBottomColor: "#000",
                   borderBottomWidth: 2,
                   width: 200,
+                  marginLeft: 60,
                 }}
               ></TextInput>
             </View>
@@ -73,6 +74,7 @@ class App extends Component {
                   paddingVertical: 20,
                   borderRadius: 10,
                   elevation: 5,
+                  marginLeft: 40,
                 }}
                 onPress={() => this.ambilData()}
               >
